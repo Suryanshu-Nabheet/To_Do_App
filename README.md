@@ -32,7 +32,7 @@ A modern, advanced To Do application for macOS built with SwiftUI. This app feat
 ```
 To Do App/
 ├── ContentView.swift      # Main SwiftUI view and all subviews
-├── ...                   # Other Swift files (if any)
+├── ...                   # Other Swift files
 ├── To Do App.xcodeproj/  # Xcode project
 ├── To Do AppTests/       # Unit tests
 ├── To Do AppUITests/     # UI tests
