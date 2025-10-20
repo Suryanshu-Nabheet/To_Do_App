@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 struct TaskItem: Identifiable, Codable {
     let id: UUID
