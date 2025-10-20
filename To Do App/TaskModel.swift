@@ -8,12 +8,13 @@
 import Foundation
 
 struct TaskItem: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     var title: String
     var isCompleted: Bool
     var createdAt: Date
     
     init(title: String, isCompleted: Bool = false) {
+        self.id = UUID()
         self.title = title
         self.isCompleted = isCompleted
         self.createdAt = Date()

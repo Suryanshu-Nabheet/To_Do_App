@@ -198,12 +198,14 @@ struct ContentView: View {
             .background(Color("BackgroundColor"))
             .navigationTitle("Add Task")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(
-                leading: Button("Cancel") {
-                    newTaskTitle = ""
-                    showingAddTask = false
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        newTaskTitle = ""
+                        showingAddTask = false
+                    }
                 }
-            )
+            }
         }
     }
     
