@@ -85,12 +85,13 @@ struct TaskItem: Identifiable, Codable {
 }
 
 struct ConversationMessage: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     let content: String
     let isUser: Bool
     let timestamp: Date
     
     init(content: String, isUser: Bool) {
+        self.id = UUID()
         self.content = content
         self.isUser = isUser
         self.timestamp = Date()
@@ -98,13 +99,14 @@ struct ConversationMessage: Identifiable, Codable {
 }
 
 struct Conversation: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     var messages: [ConversationMessage]
     var summary: String?
     var generatedTasks: [UUID]
     let createdAt: Date
     
     init() {
+        self.id = UUID()
         self.messages = []
         self.summary = nil
         self.generatedTasks = []
